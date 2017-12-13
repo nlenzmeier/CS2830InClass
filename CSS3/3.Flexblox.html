@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <!-- CSS3 techniques -->
+    <head>
+        <meta charset="utf-8">
+        <title>Columns with Floats</title>
+        
+        <style>
+            #columnswrapper{
+                border: 10px solid orange;
+                border-radius: 50px;
+                /*width: 1144px;*/
+                
+                padding:30px;
+                margin: 50px;
+                
+                display: flex;
+                
+                flex-flow: row wrap;
+            }
+            
+            #header{
+                flex: 100%;
+                text-align: center;
+                
+                
+            }
+            
+            #middle{
+                border-left: 2px solid slategray;
+                border-right: 2px solid slategray;
+            }
+            
+            .column{
+                text-indent: 20px;
+                padding: 15px;
+                text-align: justify;
+                
+                flex: 33%;
+                box-sizing: border-box;
+                
+                
+            }
+            
+            hr{
+                border-top: 2px solid slategray;
+                flex: 100%;
+                
+            }
+            
+            
+        </style>
+    
+       
+    </head>
+    
+    <body>
+    
+        
+    
+        <div id="columnswrapper" class="group">
+        
+        <h1 id="header">Web Development CS2830</h1>   
+        
+        <hr>
+            
+        <div class="column">
+        This is a random paragraph about computer science. He copied and paste the information and I did not have time to do that. <b> He sometimes put bolds on them.moer more writing! Wheeeee! klsajl sakfj ajasldktj salkejrtt aeltkj laksjdk sakdjtl kaslkrj sdalkgj.</b></div>
+        
+        <div id="middle" class="column"> Another bunch of nonsense. slkfajlgjsg lkjsalkj alsdkfj laskdjf alkjslk alskdj asrkyrjggre kjf lkaet fvlkfjl kfjlkgj. <b>slkajglkajlkhj arelkajh</b>skljdglakjhlkajhlkj lskjweltkjl</div>
+    
+        <div class="column"> laskdjgls kajglk ajeflk lskajflsak j lksadjflkaj lskf ja;owit igj slkjldkfj lejrfilis jlskjf.</div>
+        
+            
+        <hr> 
+        </div>
+    
+    
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

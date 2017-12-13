@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- This was written by Nick on August 25, 2016
+
+	The Main purpose is:
+	
+		1) To show you ID's have higher priorities than classes, even if the class 
+			has descendant combinators and type selectors like shown below. 
+		2) If there are two ID's both with same name but different elements, the one 
+			that comes last will have higher priority and override the previous ones. 
+-->
+	
+	
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>CSS Kombat</title>
+		<link rel="stylesheet" type="text/css" href="css/stage.css">
+		
+		<!-- If you insert these style elements on at a time and load the page each time,
+			then you will see and feel which one has highest priority or which one 
+			will be overridden -->
+			
+		<style>
+		/* Mileena Attacks with an ID! */
+		#goro {
+			width: 0%;
+		}
+		/* Goro attempts to recover with a descendant combinator class... */
+		div img.recover {
+			width: 100%;
+		}
+		/* ...and kicks back with an ID! */
+		#mileena {
+			visibility: hidden;
+		}
+		/* But, Mileena dodges the attack with an ID! */
+		#mileena {
+			visibility: visible;
+		}
+	
+		/*
+			Winner = Mileena
+				[ID wins over class (even with descendant combinator and type selectors )]
+					Mileena's attack beats Goro's attempt at a recovery.
+			
+				[Order Matters]
+					Mileena's recovery worked because it came after Goro's attack.
+		*/
+		</style>
+	</head>
+	<body>
+		<h2>CSS Mortal Kombat!</h2>
+		<div id="arena">
+			<div class="post"><img id="goro" class="recover" src="images/goro2.png" alt="goro"></div> 
+			<div class="post"><img id="mileena" src="images/mileena.png" alt="mileena"></div> 
+		</div>
+	</body>
+</html>

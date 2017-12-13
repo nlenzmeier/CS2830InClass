@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!--Nicolle Lenzmeier
+    14209824
+    September 27, 2016
+-->
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sixth Challenge</title>
+    <style>
+        #fixed {
+/*            resize: none;*/
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            margin: 10px;
+            float: left;
+        }
+        
+        .clickies {
+            display: inline-block;
+            width: 100px;
+            height 100px;
+        }
+        
+        .container {
+            width: 100%;
+            overflow: auto;
+        }
+        
+        
+        #topleft {
+            float: left;
+            clear: right;
+            margin: 10px;
+        }
+        
+        #bottomleft {
+            float: left;
+            clear: left;
+            margin: 10px;
+        }
+        
+        #first {
+            float: left;
+            clear: both;
+        }
+        
+        #second {
+            float: left;
+            clear: both;
+        }
+        
+        #third{
+            float: left;
+            clear: both;
+        }
+        
+    </style>
+    <style id="test">
+        h1{
+            color: green;
+        }
+    </style>
+    
+    <script>
+        
+        var box1;
+        var box2;
+        var box3;
+        //var empty = "";
+        
+//         function clearTextarea() {
+//				var textareaObject = document.getElementById("second");
+//				
+//				//try this first all together 
+//				//textareaObject.innerHTML = "";
+//				
+//				console.dir(textareaObject); 
+//				
+//				textareaObject.value = null;
+//                
+//			} 
+    
+        function launch(){
+            var change = document.getElementById('bottomleft');
+            var previousBox = document.getElementById("fixed");
+            previousBox.innerHTML= change.value;
+        }
+        
+        
+        var x = 1;
+        function toggle()
+        {
+            if(x==1){
+                var textareaObject = document.getElementById('topleft');
+                var previewPane = document.getElementById("test");
+                
+                previewPane.innerHTML = textareaObject.value;
+                x=0;
+            }
+            else if (x==0){
+                var textareaObject = document.getElementById('topleft');
+                var previewPane = document.getElementById("test");
+                
+                previewPane.innerHTML = "";
+                x=1;
+            }
+        }
+        
+         function reset() {
+            document.getElementById("fixed").innerHTML = null;
+            document.getElementById("topleft").value = null;
+            document.getElementById("bottomleft").value = null;
+        }
+    
+    
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        
+        
+        <textarea id="topleft" rows="20" cols="60" placeholder="CSS..."></textarea>
+        
+        
+        <textarea id="bottomleft" rows="20" cols="60" placeholder="HTML..."></textarea>
+        
+        
+<!--        rows="42" cols="120"-->
+        
+        
+      
+<!--        BUTTONS!-->
+        <button class="clickies" id="first" type="button" onclick="launch()">Launch</button>
+        
+        <button class="clickies" id="second" type="button" onclick="reset()">Clear</button>
+        
+        <button class="clickies" id="third" type="button" onClick="toggle()">Toggle</button>
+    </div>
+    
+    <div id="fixed"></div>
+              
+    
+</body>
+
+</html>

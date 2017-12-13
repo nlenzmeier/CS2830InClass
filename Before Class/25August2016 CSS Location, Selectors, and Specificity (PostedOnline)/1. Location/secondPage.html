@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+
+<!-- My name is Nick created this document on August 25, 2016
+	
+	The main purpose is to show the possible locations of style sheets and to show you 
+	each one has a priority and the one with the highest priority will be shown -->
+
+
+<!--  
+	The three locations for a style sheet (CSS): 
+		1) External style sheet
+		2) Internal style sheet
+		3) Inline Style 
+-->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		
+		<!-- HTML elements are everything from the start to end tag -->
+		<title>My Second Page</title> 
+		
+		<!-- Reference: http//www.w3schools.com/css/css_howto.asp -->
+		
+		
+		<!-- External Style Sheet --> 
+		<link rel="stylesheet" type="text/css" href="firstStyle.css">
+		
+		<!-- Interal Style Sheet -->		
+		<style> 
+		
+			/* comments for css */
+			h1 { 
+				text-align: center; 
+				color: orange; 
+			} 
+			
+			p { background-color: aqua;
+				font-family: "Comic Sans MS"; 
+			}
+			 
+			 /* comments for css
+			 	on multiple 
+			 	lines */
+		</style>
+		
+		
+		
+		<!-- try putting the external style sheet after the internal style and see what happens--> 
+		
+	</head> 
+	<body>
+		
+		<h1 style="background-color:green;">My First Header</h1> 	
+		
+		
+		<!-- * All HTML elements can have attributes
+			 * Attributes provide additional information about an element
+			 * Attributes are alwys specified in the start tag
+			 * Attributes ususally come in name/value pairs like: name="value" -->
+					
+		<p title="This is a tooltip, which is displayed when you hover the mouse over the text">Hello World!</p>	
+		
+		
+		<br>
+		<br>
+		
+		<!-- <hr> tag defines a thematic break in an HTML page, 
+				which is displayed as a horizontal rule 
+			<hr> is usually used to separate content (or define a change) -->  
+		<hr> 
+		
+		<i>Above is a horizontal rule</i>
+		
+		<br>
+		<br>
+		
+		<!-- this href is an attribute shown in last class, 
+				href specifies the URL (or web address) for a link -->
+		<a href="https://google.com">This is first link</a>
+	</body> 
+</html> 

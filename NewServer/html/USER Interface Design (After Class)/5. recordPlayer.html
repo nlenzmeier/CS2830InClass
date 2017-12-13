@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Created by Mr. Wergeles on October 31, 2016 -->
+<html>
+	<head>
+		<title>jQuery UI: Record Player</title>
+        <style>
+            #recordPlayer {
+                background-image: url(images/recordPlayer.jpg);
+                width: 300px;
+                height: 266px;
+                margin: 15px auto;
+            }
+            #message {
+                text-align: center;
+            }
+            #music {
+                list-style: none;
+            }
+            #music > li {
+                display: inline-block;
+            }
+            .record {
+                width: 290px;
+            }
+            audio {
+                display: none; 
+            }
+
+
+        </style>
+        <link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+        <script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        <script>
+            
+            $(function() {
+                // Make the food draggable
+                $(".record").draggable();
+                
+                // Make the dropBox droppable
+                // http://jqueryui.com/droppable/
+                $("#recordPlayer").droppable({
+                    /* "drop" is an event. When a "drop" event occurs, 
+                    						this anonymous function is invoked */
+                    drop: function(event, ui) {
+                        // event contains data regarding the drop event
+                        console.dir(event);
+                        // ui contains info about the thing that was dropped
+                        console.dir(ui);
+                        
+                        // Grab a reference to the dropped item
+                        var record = ui.draggable;
+                        // Access its alt property
+                        var artist = record.prop("alt");
+                        
+                        
+                        // Create a message indicating which record was dropped
+                        $("#message").html("Now playing: " + artist);
+                        
+                        
+                        switch(artist) {
+                            case "Kings of Leon": 
+                                $(".audioDemo").trigger('pause');
+                                $("#audio1").trigger('play');
+                                $("#audio1").fadeOut(); 
+                                break; 
+                            case "JuJu on that Beat": 
+                                $(".audioDemo").trigger('pause');
+                                $("#audio2").trigger('play');
+                                $("#audio2").prop("currentTime",35);
+                                $("#audio2").fadeOut();
+                                break; 
+                            case "Beatles":
+                                $(".audioDemo").trigger('pause');
+                                $("#audio3").trigger('play');
+                                $("#audio3").prop("currentTime", 109.5); //149); 
+                                $("#audio3").fadeOut();
+                                break;
+                            case "Bruno Mars":
+                                $(".audioDemo").trigger('pause');
+                                $("#audio4").trigger('play');
+                                $("#audio4").prop("currentTime",21);
+                                $("#audio4").fadeOut();
+                                break;
+                            case "Monster Mash":
+                                $(".audioDemo").trigger('pause');
+                                $("#audio5").trigger('play');
+                                $("#audio5").prop("currentTime",10);
+                                $("#audio5").fadeOut();
+                                break;
+                             case "Chop Stick Brothers":
+                                $(".audioDemo").trigger('pause');
+                                $("#audio6").trigger('play');
+                                $("#audio6").prop("currentTime",58.5);
+                                $("#audio6").fadeOut();
+                                break;
+                            default: 
+                                $(".audioDemo").trigger('pause'); 
+                                 $("#message").html("Stop playing");
+                                break; 
+                        }
+                        
+                       // $(".audioDemo").trigger('play');
+                        
+                        // Fade out the record
+                    if(artist != "Stop")
+                       record.fadeOut();
+                        
+                    }
+                });
+                
+            });
+            
+        </script>
+	</head>
+	<body>
+        <div id="recordPlayer"></div>
+        <h1 id="message">Now playing...</h1>
+<ul id="music">
+	<li><img class="record" src="images/KOL.png" alt="Kings of Leon"></li>
+	<li><img class="record" src="images/juju.jpg" alt="JuJu on that Beat"></li>
+	<li><img class="record" src="images/beatles.png" alt="Beatles"></li>
+	<li><img class="record" 
+		src="images/bruno-mars-24k-magic-1475846353-compressed.jpg" alt="Bruno Mars"></li>
+	<li><img class="record" src="images/mash.png" alt="Monster Mash"></li>
+	<li><img class="record" 
+		src="images/chopstickbrothers.jpg" alt="Chop Stick Brothers"></li>
+	<li><img class="record" src="images/stop.png" alt="Stop"></li>
+</ul>
+        
+        <audio class="audioDemo" id="audio1" controls preload="none">
+        	<source src="audio/Kings%20Of%20Leon%20-%20Waste%20A%20Moment.mp3" 
+        	type="audio/mpeg" /></audio>
+        <audio class="audioDemo" id="audio2" controls preload="none">
+        	<source src="audio/JuJu%20On%20Dat%20Beat.mp3" type="audio/mpeg" /></audio>
+        <audio class="audioDemo" id="audio3" controls preload="none">
+        	<source src="audio/Come%20Together.mp3" type="audio/mpeg" /></audio>
+        <audio class="audioDemo" id="audio4" controls preload="none">
+        	<source src="audio/Bruno%20Mars%2024K%20Magic.mp3" type="audio/mpeg" /></audio>
+        <audio class="audioDemo" id="audio5" controls preload="none">
+        	<source src="audio/Monster%20Mash.mp3" type="audio/mpeg" /></audio>
+        <audio class="audioDemo" id="audio6" controls preload="none">
+        	<source src="audio/chopstickBrothers.mp3" type="audio/mpeg" /></audio>
+        
+	</body>
+</html>

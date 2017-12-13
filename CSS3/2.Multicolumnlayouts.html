@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <!-- CSS3 techniques -->
+    <head>
+        <meta charset="utf-8">
+        <title>Columns with Floats</title>
+        
+        <style>
+            #columnswrapper{
+                border: 10px solid orange;
+                border-radius: 50px;
+                /*width: 1144px;*/
+                
+                padding:30px;
+                margin: 50px;
+                
+                -webkit-column-count: 3; /*for chrome*/
+                /*-moz-column-count: is for firefox*/
+                column-count: 3; /*generic*/
+                
+                -webkit-column-gap: 15px;
+                -moz-column-gap: 15px;
+                column-gap: 15px;
+                
+                -webkit-column-rule: 2px solid slategray;
+                -moz-column-rule: 2px solid slategray;
+                column-rule: 2px solid slategray;
+            }
+            
+            #header{
+                text-align: center;
+                
+                -webkit-column-span: all;
+                column-span: all;
+            }
+            
+            .column{
+                text-indent: 20px;
+                padding: 15px;
+                text-align: justify;
+                
+                -webkit-column-break-after:always;
+                column-break-after: always;
+            }
+            
+            hr{
+                border-top: 2px solid slategray;
+                
+                -webkit-column-span: all;
+                column-span: all;
+            }
+            
+            
+        </style>
+    
+       
+    </head>
+    
+    <body>
+    
+        
+    
+        <div id="columnswrapper" class="group">
+        
+        <h1 id="header">Web Development CS2830</h1>   
+        
+        <hr>
+            
+        <div class="column">
+        This is a random paragraph about computer science. He copied and paste the information and I did not have time to do that. <b> He sometimes put bolds on them.moer more writing! Wheeeee! klsajl sakfj ajasldktj salkejrtt aeltkj laksjdk sakdjtl kaslkrj sdalkgj.</b></div>
+        
+        <div id="middle" class="column"> Another bunch of nonsense. slkfajlgjsg lkjsalkj alsdkfj laskdjf alkjslk alskdj asrkyrjggre kjf lkaet fvlkfjl kfjlkgj. <b>slkajglkajlkhj arelkajh</b>skljdglakjhlkajhlkj lskjweltkjl</div>
+    
+        <div class="column"> laskdjgls kajglk ajeflk lskajflsak j lksadjflkaj lskf ja;owit igj slkjldkfj lejrfilis jlskjf.</div>
+        
+        </div>
+    
+    
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

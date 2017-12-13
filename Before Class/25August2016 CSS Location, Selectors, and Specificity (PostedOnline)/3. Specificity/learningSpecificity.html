@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- This file was written by Nick on August 25, 2016 
+
+
+	The main purpose is to show you specificity (a word I can not say very easily). 
+		Why specificity? Because CSS priority is decided based on order and specificity. -->
+	
+
+<!-- 
+		Generally speaking we can say that all the styles will "cascade" into a new 
+		"virtual" style sheet by the following rules, where number one has the highest
+		priority: 
+			1) Inline style (inside the HTML element) 
+			2) External and internal style sheets (in the head section) 
+				* whichever one is loaded last will be the one with highest priority 
+			3) Browser default 
+			
+		So, an inline style (inside a specific HTML element) has the highest priority, 
+		which means that it will override a style defined inside the <head> tag, or in 
+		an external style sheet, or a browser default value.
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		
+		<title>Specificity</title>
+        <!--
+            CSS priority is decided based on order and specificity.
+            Reference: 
+            
+            	1) http://www.w3schools.com/css/css_howto.asp
+            
+            	2) http://www.w3.org/TR/css3-selectors/#specificity
+        -->
+        
+        
+<!-- if you load the below css elements one at a time then you can see and 
+		feel the order and specificity while seeing how they work -->
+        
+        
+        
+		<!-- External Style Sheet --> 
+		<link rel="stylesheet" type="text/css" href="learningSpecificity.css">
+        
+        
+		<style>
+            /* Anything we set overrides default styles (margin, weight, size, color, etc.) */
+			h1 {
+                font-weight: normal;
+                color: blue;
+            }
+            
+            /* Order matters. If the specificity is equal 
+            (ex: The h1 { ... } above is just as specific as the h1 { ... } below), 
+            then the styles defined later win. */
+            
+            h1 {
+                color: red;
+            }
+            
+            /* A descendant combinator is more specific that a single type selector */
+            body div h1 {
+                color: green;
+            }
+            
+            /* Classes are more specific than type selectors */
+            .cool {
+                color: pink;
+            }
+            
+            /* IDs are more specific than classes
+            	REMEMBER IDs must be unique to one element!! */
+            #header {
+                color: orange;
+            }
+		</style>	
+	</head>
+	<body>
+        <div>
+            <!-- Inline styles are applied last and have highest priorty -->
+            <h1 id="header" class="cool"  >Specificity determines what CSS is applied.</h1> <!-- style="color:purple" -->
+        </div>
+	</body>
+</html>

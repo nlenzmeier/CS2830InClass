@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- This was written by Nick on August 25, 2016
+
+	The main purpose is:
+		1) To show you a class and two type selectors has higher priority over a class with one type selector. 
+			Why? Because it is more specific, thus is has more specificity.
+		2) Type + ID Selectors has higher priority than just an ID selector. This is because
+			the Type + ID is more specific, thus has more specificity, which means it has 
+			higher priority. 
+-->
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>CSS Kombat</title>
+		<link rel="stylesheet" type="text/css" href="css/stage.css">
+		
+		<!-- If you insert these style elements on at a time and load the page each time,
+			then you will see and feel which one has highest priority or which one 
+			will be overridden -->
+			
+		<style>
+		/* Sonya Blade tries some defense! */
+		img#sonya {
+			visibility: visible;
+		}
+	
+		/* ...and then attacks like never before with a class and a two type selector! */
+		span.attack img {
+			width: 0%;
+		}
+	
+		/* Mileena attempts to recover with a class and a one type selector... */
+		img.recover {
+			width: 100%;
+		}
+	
+		/* ...Mileena attacks with an ID and is beaten ! */
+		#sonya {
+			visibility: hidden;
+		}
+	
+		/*
+			Winner = Sonya Blade
+				[A class and two type selectors wins over a class with one type selector]
+					Mileena's recovery doesn't work because Sonya's attack has an extra type selector, making it more specific.
+			
+				[Type + ID selector wins over just an ID]
+					img#sonya is more specific than #sonya, therefore Sonya's defense is more specific than Mileen'a attack. 
+		*/
+		</style>
+	</head>
+	<body>
+		<h2>CSS Mortal Kombat!</h2>
+		<div id="arena">
+			<div><img id="sonya" src="images/SonyaBlade2.png" alt="sonya"></div> 
+		
+			<div><span class="attack">
+				<img id="mileena" class="recover" src="images/mileena.png" alt="mileena">
+			</span></div> 
+		</div>
+	</body>
+</html>

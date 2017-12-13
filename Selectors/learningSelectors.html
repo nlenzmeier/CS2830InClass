@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset = "UTF-8">
+		
+		<title>Learning Selectors</title>
+		
+		<!-- references
+			1. https://www.w3schools.com/cssref.css_selectors.asp
+			2. https://www.w3.org/TR/css3-selectors/
+			
+			-->
+		<style>
+			/*this is a universal selector*/
+			* {
+				margin: 10px;
+			}
+			
+			h1 {
+				text-align: center;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+			
+			/* or you could do:
+			
+				h1, h2 {
+					text-align: center;
+				} */
+			
+			/* ID's of an element should be unique withing a page!! */
+			#branding {
+				background-color: lightblue;
+			}
+			
+			.nick{
+				background-color: yellow
+			
+			}
+			
+			div.post {
+				display:inline-block;
+			}
+			
+			div.post img {
+				width: 200 px;
+				height: 150 px;
+			}
+		</style>
+		
+	</head>
+	
+	
+	
+	
+	<body>
+		<h1 id="branding"><img src="images/hang-loose.png" alt="Hang Loose">Mr. Wergeles Cool Photo Site</h1>
+		<h2 class="nick">Duck or Kitten?</h2>
+		
+		<h2>First photo</h2>
+		<div class="post"><img src="download.jpeg" alt="Hillary & Donald"></div>
+		<p> random stuff about the photo............</p>
+		<h2> Second photo</h2>
+		<div class="post"><img src="obama.jpg" alt="obama"></div>
+		<p>Even more random stuff about the random photo.....</p>
+		
+	
+	</body>
+
+
+</html>

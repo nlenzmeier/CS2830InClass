@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Specificity</title>
+		
+		<link rel="stylesheet" type="text/css" href="learningScepcifity.css">
+		
+		<style>
+		
+			h1 {
+				font-weight: normal;
+				color: blue;
+			}
+			
+			h1 {
+				color: red;
+			}
+			
+			body div h1{
+				color: green;
+			}
+			
+			.cool {
+				color: pink;
+			}
+			
+			#header {
+				color: orange;
+			} /*id have higher priority than classes (classes = .name) */
+			
+			</style>
+			
+		</head>
+		
+		
+		<body>
+		
+			<div>
+			<h1 id="header" class="cool">Specificity determines what css is applied.</h1>
+			
+		</body>
+		
+</html>

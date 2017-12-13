@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!-- Nicolle Lenzmeier
+     nalyv2
+     14209824
+     September 6, 2016 -->
+
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Third Challenge Project</title>
+    
+        <style>
+            #columnswrapper{
+                width: 1000px;
+                border: 2px solid goldenrod;
+                border-radius: 100px;
+                padding:50px;
+                margin: 20px auto;
+                
+               /* column-count: 3;
+                
+                -webkit-column-gap: 15px;
+                -moz-column-gap: 15px;
+                column-gap: 15px;*/
+            }
+            
+            .group:after{
+                content: "";
+                display: table;
+                clear: both;
+                
+            }
+            
+            #mainheader{
+                text-align: center;
+                
+               /* -webkit-column-span: all;
+                column-span: all;*/
+            }
+            
+            .header1{
+                text-align: center;
+                
+               /* -webkit-column-span: all;
+                column-span: all;*/
+            }
+            
+            .column{
+                padding: 25px;
+                margin: 10px;
+                border: 10px double black;
+                border-radius: 50px;
+                float:left;
+                
+/*
+                -webkit-column-break-after:always;
+                column-break-after: always;
+*/
+            }
+            
+            .left{
+                width: 250px;
+                background-color: forestgreen;
+            }
+            
+                        /* 
+				Physical width =
+				            250px content
+                             50px padding
+                             20px margin
+                             20px border
+            ------------------------------
+                            340px    
+			*/
+            
+            .right{
+                width: 330px;
+                background-color: tomato;
+                
+            }
+            
+                    /*
+                Physical width=
+                        1000px total
+                         340px left
+                         240px center
+                          50px padding
+                          20px margin
+                -         20px border
+            ----------------------
+                         330px right width
+            */ 
+            
+            .center{
+                width: 150px;
+                background-color: gold;
+            }
+            
+                        /* 
+				Physical width =
+				            150px content
+                             50px padding
+                             20px margin
+                             20px border
+            ------------------------------
+                            240px    
+			*/
+            
+            
+        </style>
+    
+    </head>
+
+
+    <body>
+        
+        <div id="columnswrapper" class="group">
+        
+        <h1 id="mainheader">CS2830 Third Challenge</h1>
+        
+        <div class="left column">Pokémon (ポケモン Pokemon?, /ˈpoʊkeɪˌmɒn/ or /ˈpoʊkᵻˌmɒn/ - poh-kay-mon or poh-ki-mon)[1][2] is a media franchise managed by The Pokémon Company, a Japanese consortium between Nintendo, Game Freak, and Creatures.[3] While the franchise copyright is shared by all three companies, Nintendo is the sole owner of the trademark.[4] The franchise was created by Satoshi Tajiri in 1995,[5] and is centered on fictional creatures called "Pokémon", which humans, known as Pokémon Trainers, catch and train to battle each other for sport.</div>
+        
+        <div class="center column">The franchise began as a pair of video games for the original Game Boy, developed by Game Freak and published by Nintendo. The franchise now spans video games, trading card games, animated television shows and movies, comic books, and toys. Pokémon is the second-most successful and lucrative video game-based media franchise in the world, behind only Nintendo's Mario franchise.[6]</div>
+        
+        <div class="right column">The franchise celebrated its tenth anniversary in 2006.[10] The twentieth anniversary was celebrated with a commercial at the 2016 Super Bowl[11] using the theme: "I can do that". 2016 marks the 20th anniversary of the release of the original games, with the company celebrating by airing an ad during Super Bowl 50, and issuing re-releases of Pokémon Red, Blue, and Yellow.[12][13] The mobile augmented reality game Pokémon Go was released in July 2016.[14] The next generation games Pokémon Sun and Moon are expected to be released on November 18, 2016 worldwide, except for Europe's release date being on November 23, 2016.[15] A live-action film adaptation based on Great Detective Pikachu is planned to start production in 2017.[16] The English slogan for the franchise is "Gotta Catch 'Em All".[17][18]</div>
+    
+    
+        </div>
+        
+        <h2 class="header1">Created By: Nicolle Lenzmeier</h2>
+        
+    </body>
+
+
+</html>

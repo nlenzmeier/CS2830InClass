@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- This was written by Nick on August 25, 2016 
+
+	The main purpose is to show different types of selectors and how to use them --> 
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>Selectors</title>
+        <!-- References
+           
+           	1) http://www.w3schools.com/cssref/css_selectors.asp
+    
+            2) http://www.w3.org/TR/css3-selectors/
+            
+        -->
+		<style>
+            
+            /* This is a Universal Selector */
+            * {
+                margin: 10;
+            }
+            
+            /* Instead of doing this... */
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+            /* We can use grouping */
+            h1, h2 {
+                text-align: center;
+            }
+            
+            /* ID Selector 
+            
+            	ID's of an element should be unique within a page !!
+            	Therefore, the ID selector is used to select one unique element!!
+            	
+            */
+            #branding {
+                background-color: lightblue;
+        
+        
+                padding: 10px; 
+            }
+            
+            /* Class Selector */
+            .nick {
+            	background-color:yellow; 
+            }
+            
+            
+            .divClass {
+            	text-align: center;
+            	border: 2px black solid;
+            
+            }
+            
+            
+            /* you can also specify that only specific HTML elements should be affected
+            	by a class. 
+            	
+            	In the example below, only <div> elements with class="post" 
+            	will have text-aligned justify, etc. */
+            div.post {
+                width: 600px;
+                /*text-align: center;*/
+                
+                text-align: justify; 
+                text-justify: auto; 
+                
+                margin: 20px;
+                
+                /* to put more space between the two divs, take these auto's out*/
+                 
+                /*margin-left: auto;
+                margin-right: auto;*/
+                     
+                
+                /*float: left; */  /*is the old way and not as easy*/
+                display: inline-block;
+                
+                border: 2px black solid; 
+            }
+            
+            /* This will make EVERY <img> tag 200px wide 
+            
+            	Do not add any space between the property value and the unit!!
+            	Otherwise, that particular value and unit will not work properly. 
+            */
+            
+            /*
+            img {
+                width: 400px;
+            }
+            */
+            
+            
+            
+            /* It would be better to be more specific like below */
+            
+            
+            /* Also, this is a descendant combinator 
+            
+            Take a look at this to better understand: 
+            http://www.w3schools.com/css/css_combinators.asp 
+            */
+            div.post img {
+                width: 200px;
+                height: 150px; 
+                
+                /* this is used to center the photos when the text is justified */
+                display: block; 
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /* User Action Pseudo-Class */
+            div.post img:hover {
+                box-shadow: 0 0 100px black;
+            }
+            
+            /* if you use float left you have to have an after box */
+            .after-box {
+				clear: left;
+				border: 3px solid red;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- This is how we apply the ID -->
+		<h1 id="branding"><img src="images/hang-loose.png" alt="Hang Loose"><br>
+		Mr. Wergeles Cool Photo Site</h1>
+		
+		<!-- This is how we apply the class -->
+		<h2 class="nick">Hillary Clinton or Donald Trump</h2> 
+		
+		
+		
+		<div class="divClass">
+			<div class="post" ><!-- style="float:left;" --> 
+			<!--float:left is the old way, use inline-block-->
+				<h2>First Photo</h2>
+				<img src="images/donald-hillary.jpg" alt="Donald & Hillary">
+				<p>Hillary Diane Rodham Clinton (born October 26, 1947) is an American politician 
+				and the nominee of the Democratic Party for President of the United States in 
+				the 2016 election. She served as the 67th United States Secretary of State 
+				from 2009 to 2013, the junior United States Senator representing New York 
+				from 2001 to 2009, First Lady of the United States during the presidency 
+				of Bill Clinton from 1993 to 2001, and First Lady of Arkansas during his 
+				governorship from 1979 to 1981 and from 1983 to 1992.</p>
+			</div>
+		
+			<div class="post" ><!-- style="float:left;" -->
+			<!--float:left is the old way, use inline-block-->
+				<h2>Second Photo</h2>
+				<img src="images/obama.jpg" alt="Obama">
+				<p>Donald John Trump (born June 14, 1946) is an American businessman, 
+				television personality, author, politician, and the Republican Party 
+				nominee for President of the United States in the 2016 election. 
+				He is chairman of The Trump Organization, which is the principal 
+				holding company for his real estate ventures and other business 
+				interests. Born and raised in New York City, Trump received a bachelor's 
+				degree in economics from the Wharton School of the University of 
+				Pennsylvania in 1968. </p>
+			</div>
+			
+			<!--<div class="after-box">Another box, after the floating boxes...</div>-->
+			<!--If you use float: left then you have to have this after-box to stop the float left -->
+		</div> 	
+	</body>
+</html>

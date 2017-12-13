@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>HTML Tables</title>
+        
+        <style>
+        
+            #MizzouFootballTable th, #MizzouFootballTable td{
+                border: 3px solid black;
+                padding: 10px;
+                font-size: 13px;
+                height: 50px;
+            }
+        
+            #MizzouFootballTable{
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+/*
+            #MizzouFootballTable tr:nth-child(even){
+                background-color: goldenrod;
+            }
+            
+            #MizzouFootballTable tr:nth-child(odd){
+                background-color: darkgray;
+            }
+*/
+            
+            #MizzouFootballTable .home{
+                background-color: goldenrod;
+            }
+            
+            #MizzouFootballTable .away{
+                background-color: darkgray;
+            }
+        
+            img.mizzou{
+                width: 100px;
+                height: 100px;
+            }
+            
+            .header{
+                background-color: black;
+            }
+            
+            h1{
+                color: goldenrod
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!-- to define a table you need the table tag -->
+        <table id="MizzouFootballTable">
+            <!-- tr means table row -->
+            <tr>
+                <th colspan="6">
+                    <h1 class ="header"><img class="mizzou"
+                         src="football.jpeg"
+                         alt="mizzou">
+                    CS2830 Mizzou Football Schedule 2016</h1>
+                
+                    <img
+                        src="mizzou.jpeg"
+                        alt="mizzou">
+                </th>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Location</th>
+                <th>Team</th>
+                <th>Score</th>
+            </tr>
+            <tr class="away">
+                <td>Sat Sep 3</td>
+                <td>11 AM</td>
+                <td rowspan="2"></td>
+                <td>@ West Virginia</td>
+                <td>Moutaineers</td>
+                <td>L 26 - 11</td>
+            </tr>
+            
+            <tr class="home">
+                <td>Sat Sep 10</td>
+                <td>6:30 PM</td>
+                <!-- <td></td> -->
+                <td>VS Easter Michigan</td>
+                <td>Eagles</td>
+                <td>My Prediction:<br> W 24 - 7</td>
+            </tr>
+            
+            <tr class="home">
+                <td>Sat Sep 17</td>
+                <td>6:30 PM</td>
+                <td>Tiger Stripe Game</td>
+                <td>VS Georgia</td>
+                <td>Bulldogs</td>
+                <td rowspan="5">TBA</td>
+            </tr>
+            
+            <tr class="home">
+                <td>Sat Sep 24</td>
+                <td rowspan = "4">TBA</td>
+                <td rowspan = "3"></td>
+                <td>VS Delaware State</td>
+                <td>Hornets</td>
+                <!-- <td>TBA</td> -->
+            </tr>
+            
+            <tr class="away">
+                <td>Sat Oct 1</td>
+                <!--<td></td>-->
+                <!--<td>TBA</td>-->
+                <td>@ LSU</td>
+                <td>Tigers</td>
+            </tr>
+            
+            <tr class="away">
+                <td>Sat Oct 15</td>
+                <!-- <td></td> -->
+                <!--<td></td> -->
+                <td>@ Florida</td>
+                <td>Gators</td>
+            </tr>
+            
+            <tr class="home">
+                <td>Sat Oct 22</td>
+                <!-- <td></td> -->
+                <td>Homecoming</td>
+                <td>CS Middle Tennessee</td>
+                <td>Blue Raiders</td>
+            </tr>
+        </table>
+    
+    
+    
+    </body>
+
+    
+
+
+
+
+</html>

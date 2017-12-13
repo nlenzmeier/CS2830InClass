@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!-- Nicolle Lenzmeier
+     nalyv2
+     14209824
+     September 10, 2016 -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Fourth Challenge</title>
+        <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+        <style>
+            #MovieTable th, #MovieTable td{
+                border: 3px solid black;
+                padding: 5px;
+                font-size: 16pt;
+                height: 50px;
+                
+            }
+            
+            #MovieTable{
+                border-collapse: collapse;
+                width: 100%;
+                background-color: dimgray;
+                padding: 35px;
+            }
+            
+            body {
+                font-family: 'Permanent Marker', serif; 
+                font-size: 48pt;
+            }
+            
+            .h1{
+                color: goldenrod;
+                font-size: 32pt;
+                padding: 35px;
+            }
+            
+            .h2{
+                color: goldenrod;
+                padding: 30px;
+                font-size: 24pt;
+            }
+            
+            .cell{
+                padding: 15px;
+                font-size: 16pt;
+                border: 3px solid black;
+                
+            }
+            .FirstRow{
+                background-color: goldenrod;
+                text-align: center;
+            }
+            
+            .even{
+                background-color: gainsboro;
+            }
+            
+            .odd{
+                background-color: white;
+            }
+            
+            .red{
+                background-color: #C00;
+            }
+            
+            img{
+                height: 200px;
+                display: block;
+                margin: auto;
+            }
+            
+            .center{
+                text-align: center;
+            }
+        </style>
+    
+    </head>
+    
+    <body>
+        <table id="MovieTable">
+            <!-- tr means table row -->
+            <tr>
+                <th colspan="6">
+                    <p class="h1">Movie Theater Showtimes</p>
+                </th>
+              </tr>  
+                
+            <tr class="header">
+            <th colspan="6" >
+                <p class="h2">Saturday September 16, 2016</p>
+            </th>
+            </tr>
+            
+            
+            <tr class="FirstRow">
+                <th>Poster</th>
+                <th>Movie</th>
+                <th>Rating</th>
+                <th>Length</th>
+                <th>Showtimes</th>
+                <th>Amenities</th>
+            </tr>
+            
+            <tr class="even cell">
+                <td rowspan="4"><img src="bad-moms-one-sheet.jpg"
+                         alt="movie"></td>
+                <td rowspan="4">Bad Moms</td>
+                <td class="center" rowspan="4">R</td>
+                <td rowspan="4">1 hour(s) 41 minutes</td>
+                <td class="center red">1:35 PM</td>
+                <td rowspan="4">CC DV</td>
+            </tr>
+            
+                <tr class="center red"><td>4:20 PM</td></tr>
+                <tr><td class="center even">6:55 PM</td></tr>
+                <tr><td class="center even">9:25PM</td></tr>
+            
+            <tr class="odd cell">
+            <td rowspan="2"><img src="kubo_onesheet.jpg"
+                     alt="movie"></td>
+                <td rowspan="2">Kubo</td>
+                <td rowspan="2" class="center">PG</td>
+                <td rowspan="2">1 hour(s) 42 minutes</td>
+                <td class="center red">1:55 PM</td>
+                <td rowspan="2">CC DV</td>
+            </tr>
+            
+                <tr class="center red"><td>4:25 PM</td></tr>
+            
+            <tr class="even cell">
+                <td rowspan="4"><img src="pets_fandango_onesheet_v1.jpg"
+                         alt="movie"></td>
+                <td rowspan="4">Secret Life of Pets</td>
+                <td rowspan="4" class="center">PG</td>
+                <td rowspan="4">1 hour(s) 30 minutes</td>
+                <td class="center red">2:05 PM</td>
+                <td rowspan="4">CC DV</td>
+            </tr>
+            
+                <tr class="center red"><td>4:30 PM</td></tr>
+                <tr class="center even"><td>6:45 PM</td></tr>
+                <tr class="center even"><td>9:10 PM</td></tr>
+            
+            <tr class="odd cell">
+                <td rowspan="4"><img src="startrekbeyond_poster.jpg"
+                         alt="movie"></td>
+                <td rowspan="4">Star Trek Beyond</td>
+                <td rowspan="4" class="center">PG-13</td>
+                <td rowspan="4">2 hour(s) 2 minutes</td>
+                <td class="center red">1:10 PM</td>
+                <td rowspan="4">CC DV</td>
+            </tr>
+            
+                <tr class="center red"><td>4:05 PM</td></tr>
+                <tr class="center odd"><td>7:15 PM</td></tr>
+                <tr class="center odd"><td>10:00PM</td></tr>
+            
+            
+             <tr class="even cell">
+                <td rowspan="4"><img src="suicidesquad-poster1.jpg"
+                         alt="movie"></td>
+                <td rowspan="4">Suicide Squad</td>
+                <td rowspan="4" class="center">PG-13</td>
+                <td rowspan="4">2 hour(s) 3 minutes</td>
+                <td class="center red">1:45 PM</td>
+                <td rowspan="4">CC DV</td>
+            </tr>
+                <tr class="center red"><td>4:35 PM</td></tr>
+                <tr class="center even"><td>7:25 PM</td></tr>
+                <tr class="center even"><td>10:15PM</td></tr>
+                
+            
+        </table>
+    
+    </body>
+
+
+
+
+</html>
